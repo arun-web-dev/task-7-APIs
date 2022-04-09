@@ -4,12 +4,15 @@ import ProductsList from "./COMPONENTS/ProductsList";
 import Spinner from "./COMPONENTS/Spinner";
 import "tachyons";
 
+
 function App() {
   const [products, setProducts] = useState([]);
   const [pageIsloading, setPageIsloading] = useState(true);
 
   useEffect(() => {
+    
     fetchProducts();
+    
   }, []);
 
   const fetchProducts = async () => {
