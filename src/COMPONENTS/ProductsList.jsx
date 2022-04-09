@@ -5,7 +5,8 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 const ProductsList = ({ products }) => {
-  const menus = ["Home Furnising", "Furniture", "Accessories"];
+  const menus = ["Home Furnishing", "Furniture", "Accessories"];
+
   return (
     <div className="mt3 ">
       {menus.map((menu, idx) => {
@@ -17,9 +18,9 @@ const ProductsList = ({ products }) => {
               arrows
               autoPlaySpeed={3000}
               centerMode={false}
-              className="first"
-              containerClass="container-with-dots second"
-              dotListClass=" third "
+              className=""
+              containerClass="container-with-dots "
+              dotListClass="slide-button"
               draggable
               focusOnSelect={false}
               infinite

@@ -16,11 +16,9 @@ function App() {
     await Commerce.products
       .list()
       .then((product) => {
-        console.log(products);
         const sortedData = product.data.sort((a, b) => {
           return b.price - a.price;
         });
-        console.log(sortedData);
         setProducts(sortedData);
         setPageIsloading(false);
       })
