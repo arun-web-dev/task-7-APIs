@@ -1,10 +1,7 @@
 import Commerce from "@chec/commerce.js";
 
-console.log(import.meta.env);
-
-const checAPIKey = import.meta.env.VITE_REACT_APP_CHEC_PUBLIC_KEY;
-const devEnvironment = import.meta.env.MODE;
-
+const checAPIKey = import.meta.env.VITE_CHEC_PUBLIC_KEY;
+const devEnvironment = process.env.NODE_ENV === "development";
 const commerceConfig = {
   axiosConfig: {
     headers: {
