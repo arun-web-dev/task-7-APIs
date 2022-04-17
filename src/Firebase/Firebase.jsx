@@ -19,7 +19,7 @@ import {
 } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_APP_FIREBASE,
+  apiKey: process.env.VITE_APP_FIREBASE,
   authDomain: "react-firebase-e0b79.firebaseapp.com",
   projectId: "react-firebase-e0b79",
   storageBucket: "react-firebase-e0b79.appspot.com",
