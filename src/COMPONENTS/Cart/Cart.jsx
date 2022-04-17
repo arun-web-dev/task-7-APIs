@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function Cart(props) {
   const { cartItems } = props;
+
   const navigate = useNavigate();
   return (
     <div className="cart dim pointer" onClick={() => navigate("/placeOrder")}>

@@ -4,8 +4,15 @@ import ProductItem from "./ProductItem";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-const ProductsList = ({ products }) => {
+const ProductsList = ({ products, addToWishList, removeFromWishList }) => {
   const menus = ["Home Furnishing", "Furniture", "Accessories"];
+
+  const addToWishListHandler = (product) => {
+    addToWishList(product);
+  };
+  const removeFromWishListHandler = (id) => {
+    removeFromWishList(id);
+  };
 
   return (
     <div className="mt3 product-list-view-container">
@@ -61,7 +68,12 @@ const ProductsList = ({ products }) => {
               swipeable
             >
               {products.map((product) => (
-                <ProductItem key={product.id} product={product} />
+                <ProductItem
+                  key={product.id}
+                  product={product}
+                  addToWishListHandler={addToWishListHandler}
+                  removeFromWishListHandler={removeFromWishListHandler}
+                />
               ))}
             </Carousel>
           </div>
